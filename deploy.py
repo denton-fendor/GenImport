@@ -111,7 +111,7 @@ ctime=time.strftime("%H%M%S")
 #if endtime:
 #    createParms['endtime'] = time.time() + long(endtime)
 if environment == "Production":
-  keysize=8
+  keysize=10
 else:
   keysize=5
 for key in parms:
