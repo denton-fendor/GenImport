@@ -1,0 +1,15 @@
+pattern_id=a-5cba845a-96b9-4092-8e03-5271f8d85004
+deploymentName=sys - MDM HADR DR
+web=
+app=
+db=ST1DS-C_DR
+*.ConfigPWD_ROOT.password=rootPwd@%s
+*.ConfigPWD_USER.password=virtPwd@%s
+*.instanceOwner=mcisys1
+*.instanceOwnerPassword=db2Inst@%s
+*.fencedUserPassword=fenc@%s
+*.databaseUser=mcidbusr
+*.databaseUserPassword=mdMpwd@96145
+*.databaseName=mcisys1
+*.CertPassword=notUsed@%s
+*.KEYFILENAME=sys1DBkeystore

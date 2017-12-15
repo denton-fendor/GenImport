@@ -71,8 +71,13 @@ patternID = parms['pattern_id'].strip()
 del parms['pattern_id']
 pattern = None
 print "Pattern id=%s" % patternID
-pattern=deployer.virtualsystempatterns.get(patternID)
-#pattern=deployer.virtualsystempatterns.list({'app_id':patternID})[0]
+try:
+  pattern=deployer.virtualsystempatterns.get(patternID)
+except IOError, e:
+  print "Pattern does not exists or you do not have permission to the pattern"
+  print e
+  sys.exit(-1)
+ 
 print "Pattern name=%s %s" % (pattern.app_name,pattern.patternversion)
 #
 # Get IP groups for the different tiers
